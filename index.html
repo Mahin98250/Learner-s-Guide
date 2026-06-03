@@ -1,132 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learner's Guide - A mobile-first study material platform">
-    <title>Learner's Guide - Your Study Companion</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">📚 Learner's Guide</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#portals">Portals</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Welcome to Learner's Guide</h1>
-                <p>Your comprehensive study material platform designed for students and educators</p>
-                <div class="hero-buttons">
-                    <button class="btn btn-primary" onclick="scrollTo('portals')">Get Started</button>
-                    <button class="btn btn-secondary" onclick="scrollTo('features')">Learn More</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features" id="features">
-        <div class="container">
-            <h2>Features</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🎓</div>
-                    <h3>Classes & Subjects</h3>
-                    <p>Organized learning materials across multiple subjects and classes</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📝</div>
-                    <h3>Notes & Q&A</h3>
-                    <p>Comprehensive notes and frequently asked questions for quick learning</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📄</div>
-                    <h3>PDF Resources</h3>
-                    <p>Download and access high-quality PDF study materials</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📱</div>
-                    <h3>Mobile-First</h3>
-                    <p>Optimized for all devices - learn anywhere, anytime</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">👨‍🎓</div>
-                    <h3>Student Portal</h3>
-                    <p>Access all learning materials and track your progress</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">👨‍💼</div>
-                    <h3>Admin Portal</h3>
-                    <p>Manage content and oversee platform activities</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portals Section -->
-    <section class="portals" id="portals">
-        <div class="container">
-            <h2>Access Portals</h2>
-            <div class="portals-grid">
-                <div class="portal-card student-portal">
-                    <div class="portal-icon">👨‍🎓</div>
-                    <h3>Student Portal</h3>
-                    <p>Browse classes, access notes, solve questions, and download resources</p>
-                    <button class="btn btn-primary">Enter Student Portal</button>
-                </div>
-                <div class="portal-card admin-portal">
-                    <div class="portal-icon">👨‍💼</div>
-                    <h3>Admin Portal</h3>
-                    <p>Manage content, users, and platform settings</p>
-                    <button class="btn btn-primary">Enter Admin Portal</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2>Get in Touch</h2>
-            <form class="contact-form" id="contactForm">
-                <div class="form-group">
-                    <input type="text" placeholder="Your Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" placeholder="Your Email" required>
-                </div>
-                <div class="form-group">
-                    <textarea placeholder="Your Message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Learner's Guide. All rights reserved.</p>
-            <p>Made with ❤️ for students and educators</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Learner's Guide - Study Smarter, Learn Faster" />
+    <meta name="theme-color" content="#2563EB" />
+    <title>Learner's Guide - Study Smarter, Learn Faster</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
