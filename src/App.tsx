@@ -7,6 +7,10 @@ import Materials from './pages/student/Materials'
 import Profile from './pages/student/Profile'
 import AdminLogin from './pages/Admin/AdminLogin'
 import Dashboard from './pages/Admin/Dashboard'
+import Students from './pages/Admin/Students'
+import ClassesAdmin from './pages/Admin/Classes'
+import SubjectsAdmin from './pages/Admin/Subjects'
+import Settings from './pages/Admin/Settings'
 
 function Landing() {
   return (
@@ -187,6 +191,11 @@ export default function App() {
   return (
     <HashRouter>
       <Routes>
+        
+          <Route path="/admin/students" element={<Students />} />
+<Route path="/admin/classes" element={<ClassesAdmin />} />
+<Route path="/admin/subjects" element={<SubjectsAdmin />} />
+<Route path="/admin/settings" element={<Settings />} />
         <Route path="/admin/login" element={<AdminLogin />} />
         <Route path="/admin/dashboard" element={<Dashboard />} />
         <Route path='/student/profile' element={<Profile />} />
