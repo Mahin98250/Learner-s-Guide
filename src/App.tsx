@@ -4,6 +4,7 @@ import StudentHome from './pages/student/Home'
 import Classes from './pages/student/Classes'
 import Subjects from './pages/student/Subjects'
 import Materials from './pages/student/Materials'
+import Profile from './pages/student/Profile'
 
 function Landing() {
   return (
@@ -184,6 +185,7 @@ export default function App() {
   return (
     <HashRouter>
       <Routes>
+        <Route path='/student/profile' element={<Profile />} />
         <Route path="/" element={<Landing />} />
         <Route path="/student/home" element={<StudentHome />} />
         <Route path="/student/classes" element={<Classes />} />
