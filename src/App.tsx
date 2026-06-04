@@ -175,17 +175,7 @@ function Landing() {
   )
 }
 
-function AdminLogin() {
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-blue-50">
-      <div className="bg-white p-8 rounded-3xl shadow-xl">
-        <h1 className="text-3xl font-bold text-blue-700">
-          Admin Login
-        </h1>
-      </div>
-    </div>
-  )
-}
+
 
 export default function App() {
   return (
