@@ -1,5 +1,5 @@
 import { useState } from 'react'
-
+import AdminSidebar from '../../components/AdminSidebar'
 export default function Classes() {
   const [classes] = useState([
     'Class 7',
