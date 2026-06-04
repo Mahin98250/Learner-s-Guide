@@ -204,7 +204,7 @@ export default function App() {
         <Route path="/student/classes" element={<Classes />} />
         <Route path="/student/subjects" element={<Subjects />} />
         <Route path="/student/materials" element={<Materials />} />
-        <Route path="/admin/login" element={<AdminLogin />} />
+       
       </Routes>
     </HashRouter>
   )
