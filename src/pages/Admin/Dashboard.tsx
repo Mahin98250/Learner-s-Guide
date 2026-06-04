@@ -1,5 +1,5 @@
 import { useState } from 'react'
-
+import AdminSidebar from '../../components/AdminSidebar'
 export default function Dashboard() {
   const [notes, setNotes] = useState<File | null>(null)
   const [ppt, setPpt] = useState<File | null>(null)
