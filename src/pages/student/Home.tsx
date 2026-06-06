@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logo.jpeg'
 
 const classes = ['7', '8', '9', '10', '11', '12']
 
