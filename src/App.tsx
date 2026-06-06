@@ -1,4 +1,7 @@
 import React from 'react'
+import ClassDetails from './pages/student/ClassDetails'
+import SubjectDetails from './pages/student/SubjectDetails'
+import MaterialViewer from './pages/student/MaterialViewer'
 import { HashRouter, Routes, Route, Link } from 'react-router-dom'
 import StudentHome from './pages/student/Home'
 import Classes from './pages/student/Classes'
@@ -194,6 +197,9 @@ export default function App() {
         <Route path="/student/classes" element={<Classes />} />
         <Route path="/student/subjects" element={<Subjects />} />
         <Route path="/student/materials" element={<Materials />} />
+        <Route path="/student/class/:classId" element={<ClassDetails />} />
+<Route path="/student/subject/:subjectId" element={<SubjectDetails />} />
+<Route path="/student/material-viewer" element={<MaterialViewer />} />
        
       </Routes>
     </HashRouter>
