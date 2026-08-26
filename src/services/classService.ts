@@ -1,34 +1,51 @@
 import { supabase } from '@/lib/supabase';
 import { Class } from '@/types';
 
+const inFlight = new Map<string, Promise<unknown>>();
+
+const dedupe = <T>(key: string, request: () => Promise<T>) => {
+  const existing = inFlight.get(key) as Promise<T> | undefined;
+  if (existing) return existing;
+
+  const promise = request().finally(() => {
+    inFlight.delete(key);
+  });
+  inFlight.set(key, promise);
+  return promise;
+};
+
 export const classService = {
   async getClasses() {
-    try {
-      const { data, error } = await supabase
-        .from('classes')
-        .select('*')
-        .order('class_name', { ascending: true });
+    return dedupe('classes:list', async () => {
+      try {
+        const { data, error } = await supabase
+          .from('classes')
+          .select('*')
+          .order('class_name', { ascending: true });
 
-      if (error) throw error;
-      return { classes: (data || []) as Class[], error: null };
-    } catch (error) {
-      return { classes: [], error };
-    }
+        if (error) throw error;
+        return { classes: (data || []) as Class[], error: null };
+      } catch (error) {
+        return { classes: [], error };
+      }
+    });
   },
 
   async getClassById(classId: string) {
-    try {
-      const { data, error } = await supabase
-        .from('classes')
-        .select('*')
-        .eq('id', classId)
-        .single();
+    return dedupe(`classes:item:${classId}`, async () => {
+      try {
+        const { data, error } = await supabase
+          .from('classes')
+          .select('*')
+          .eq('id', classId)
+          .single();
 
-      if (error) throw error;
-      return { class: data as Class, error: null };
-    } catch (error) {
-      return { class: null, error };
-    }
+        if (error) throw error;
+        return { class: data as Class, error: null };
+      } catch (error) {
+        return { class: null, error };
+      }
+    });
   },
 
   async createClass(classData: Omit<Class, 'id' | 'created_at' | 'updated_at'>) {
